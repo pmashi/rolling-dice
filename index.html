@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function initialize() {
+            d1 = document.getElementById("dice1");
+            d2 = document.getElementById("dice2");
+            sum = document.getElementById("sum");
+            roll();
+        }
+        
+        function roll() {
+            const one = Math.floor((6 * Math.random() + 1))
+            const two = Math.floor((6 * Math.random() + 1))
+            d1.innerHTML = "Dice 1: " + one;
+            d2.innerHTML = "Dice 2: " + two;
+            sum.innerHTML = "Sum: " + (one+two);
+        }
+    </script>
+</head>
+<body onload="initialize();">
+    <p id="dice1"></p>
+    <p id="dice2"></p>
+    <button onclick="roll();"> Roll</button>
+    <p id="sum"></p>
+</body>
+</html>
